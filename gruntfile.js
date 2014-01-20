@@ -19,7 +19,7 @@ module.exports = function( grunt ) {
       },
       main: {
         src: [ 'src/templates/pages/*.hbs' ],
-        dest: 'src/'
+        dest: 'tmp/'
       }
 
     },
@@ -31,19 +31,19 @@ module.exports = function( grunt ) {
         collapseBooleanAttributes: true,
       },
       test: {
-        src: 'src/index.html',
+        src: 'tmp/index.html',
         dest: 'test/index.html'
       },
       prod: {
-        src: 'src/index.html',
+        src: 'tmp/index.html',
         dest: 'prod/index.html'
       }
 
     },
 
     clean: {
-      test:  [ 'test' ],
-      prod: [ 'prod' ]
+      test:  [ 'tmp', 'test' ],
+      prod: [ 'tmp', 'prod' ]
     },
 
     copy: {

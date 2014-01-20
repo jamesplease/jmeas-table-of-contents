@@ -1,6 +1,6 @@
 {
   "name": "table-of-contents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The table of contents for my projects.",
   "main": "index.html",
   "scripts": {

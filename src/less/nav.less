@@ -12,21 +12,12 @@ nav > ul {
     line-height: 24px;
     padding: 2px 0;
     margin-bottom: 18px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    -webkit-box-orient: horizontal;
-    -webkit-box-align: stretch;
-    -moz-box-orient: horizontal;
-    -moz-box-align: stretch;
-    box-orient: horizontal;
-    box-align: stretch;
+    display: block;
 
-    > span {
-      -webkit-box-flex: 1;
-      -moz-box-flex: 1;
-      box-flex: 1;
-      display: block;
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
     }
 
     > a {
@@ -38,24 +29,29 @@ nav > ul {
       -moz-box-flex: 0;
       box-flex: 0;
       display: block;
+      float: left;
+      width: 50%;
 
       i {
         color: @textColor;
       }
 
-      &:first-child:before {
-        color: @crimson;
-        font-size: 22px;
-        width: 20px;
-        text-align: right;
-        margin-right: 10px;
-        counter-increment: chapter;
-        content: counter( chapter );
+      &:first-child {
+        text-align: left;
+        &:before {
+          color: @crimson;
+          font-size: 22px;
+          width: 20px;
+          text-align: right;
+          margin-right: 10px;
+          counter-increment: chapter;
+          content: counter( chapter );
+        }
       }
 
       &:last-child {
-        font-style: italic;
         text-align: right;
+        font-style: italic;
       }
 
     }
