@@ -5,7 +5,7 @@ The source of the landing page of `jmeas.com`.
 ### Installation
 
 - Clone this repository.  
-  `git clone http://www.github.com/...`
+  `git clone https://github.com/jmeas/jmeas-table-of-contents.git`
 
 - Copy `_remote.json` to `remote.json`.  
   `cp config/_remote.json config/remote.json`
