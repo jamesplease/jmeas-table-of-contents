@@ -1,0 +1,27 @@
+{
+  "name": "table-of-contents",
+  "version": "1.0.0",
+  "description": "The table of contents for my projects.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jmeas"
+  ],
+  "private": true,
+  "author": "Jmeas",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "clean": "~2.1.6",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-rsync": "~0.2.1",
+    "time-grunt": "~0.2.8",
+    "assemble": "~0.4.34",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-imagemin": "~0.5.0"
+  }
+}

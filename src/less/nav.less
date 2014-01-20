@@ -1,0 +1,65 @@
+body {
+  counter-reset: chapter;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    width: 100%;
+    line-height: 24px;
+    padding: 2px 0;
+    margin-bottom: 18px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    box-orient: horizontal;
+    box-align: stretch;
+
+    > span {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      display: block;
+    }
+
+    > a {
+      color: @textColor;
+      text-decoration: none;
+      font-family: 'Georgia',serif;
+      font-size: 17px;
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      display: block;
+
+      i {
+        color: @textColor;
+      }
+
+      &:first-child:before {
+        color: @crimson;
+        font-size: 22px;
+        width: 20px;
+        text-align: right;
+        margin-right: 10px;
+        counter-increment: chapter;
+        content: counter( chapter );
+      }
+
+      &:last-child {
+        font-style: italic;
+        text-align: right;
+      }
+
+    }
+
+  }
+
+}

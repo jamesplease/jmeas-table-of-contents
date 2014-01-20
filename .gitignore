@@ -13,3 +13,8 @@ results
 
 npm-debug.log
 node_modules
+
+test
+prod
+src/data/config.yaml
+config/remote.json

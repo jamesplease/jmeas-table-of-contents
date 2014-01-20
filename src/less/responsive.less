@@ -1,0 +1,41 @@
+.visible-phone,
+i.visible-phone {
+  display: none;
+}
+@-ms-viewport{
+  width: device-width;
+}
+@media screen and (max-width: 400px) {
+  @-ms-viewport{
+    width: 320px;
+  }
+}
+@media (max-width: @screen-phone-max) {
+  body {
+    width: -webkit-calc(100%-5px);
+    width: -moz-calc(100%-5px);
+    width: calc(100%-5px);
+    margin: 10px;
+  }
+  header {
+    h1 {
+      font-size: 27px;
+    }
+  }
+  nav {
+    li {
+      width: 220px;
+      margin: 0 auto;
+      a {
+        &:first-child {
+          width: 200px;
+          margin: 0 auto;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
