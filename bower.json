@@ -1,0 +1,25 @@
+{
+  "name": "jmeas-table-of-contents",
+  "version": "1.0.1",
+  "homepage": "https://github.com/jmeas/jmeas-table-of-contents",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "The landing page for jmeas.com",
+  "keywords": [
+    "jmeas"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.7.1"
+  }
+}

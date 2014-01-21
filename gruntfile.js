@@ -8,6 +8,7 @@ module.exports = function( grunt ) {
   grunt.initConfig({
 
     remote: require( './config/remote.json' ),
+    bowerrc: grunt.file.readJSON( './.bowerrc' ),
 
     assemble: {
 
@@ -86,13 +87,25 @@ module.exports = function( grunt ) {
       }
     },
 
+    uglify: {
+      test: {
+        src: 'src/bower_components/modernizr/modernizr.js',
+        dest: 'test/js/modernizr.js'
+      },
+      prod: {
+        src: '<%= bowerrc.directory %>/modernizr/modernizr.js',
+        dest: 'prod/js/modernizr.js'
+      }
+
+    },
+
     imagemin: {
 
       test: {
         files: [{
           expand: true,                  // Enable dynamic expansion
           cwd: 'src/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          src: ['img/**/*.{png,jpg,gif}'],   // Actual patterns to match
           dest: 'test/'                  // Destination path prefix
         }]
       },
@@ -101,7 +114,7 @@ module.exports = function( grunt ) {
         files: [{
           expand: true,                  // Enable dynamic expansion
           cwd: 'src/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          src: [ 'img/**/*.{png,jpg,gif}'],   // Actual patterns to match
           dest: 'prod/'                  // Destination path prefix
         }]
       }
@@ -127,8 +140,8 @@ module.exports = function( grunt ) {
 
   });
 
-  grunt.registerTask( 'default', [ 'clean:test', 'assemble', 'htmlmin:test', 'imagemin:test', 'copy:test', 'less:test'] );
-  grunt.registerTask( 'prod',    [ 'clean:prod', 'assemble', 'htmlmin:prod', 'imagemin:prod', 'copy:prod', 'less:prod'] );
+  grunt.registerTask( 'default', [ 'clean:test', 'assemble', 'htmlmin:test', 'imagemin:test', 'copy:test', 'uglify:test', 'less:test'] );
+  grunt.registerTask( 'prod',    [ 'clean:prod', 'assemble', 'htmlmin:prod', 'imagemin:prod', 'copy:prod', 'uglify:prod', 'less:prod'] );
   grunt.registerTask( 'sync',    [ 'prod', 'rsync' ] );
 
 }
