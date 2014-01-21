@@ -2,8 +2,8 @@ module.exports = function( grunt ) {
 
   // Load tasks & time
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  require('matchdep').filterDev('assemble').forEach(grunt.loadNpmTasks);
   require('time-grunt')(grunt);
+  grunt.loadNpmTasks('assemble');
 
   grunt.initConfig({
 
