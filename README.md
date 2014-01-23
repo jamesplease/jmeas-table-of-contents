@@ -7,6 +7,9 @@ The source of the landing page of `jmeas.com`.
 - Clone this repository.  
   `git clone https://github.com/jmeas/jmeas-table-of-contents.git`
 
+- Install dependencies.  
+  `npm install && bower install`
+
 - Copy `_remote.json` to `remote.json`.  
   `cp config/_remote.json config/remote.json`
 
